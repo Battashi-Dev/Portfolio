@@ -12,12 +12,11 @@ import logo from "../assets/download.png";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { useIcon } from "./Constant";
+
 const HeroSection = () => {
+  const { gitHub, linkedin, email } = useIcon();
   const navigate = useNavigate();
-  const email = "mailto:battashi.dev@gmail.com";
-  const gitHub = "https://github.com/Battashi-Dev";
-  const linkedin =
-    "https://www.linkedin.com/in/mohammed-al-battashi-952374416/";
 
   return (
     <HStack justify="space-between" py={5} px={7}>

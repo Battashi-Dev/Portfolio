@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HeroSection from "./Components/HeroSection";
 import AboutSection from "./Components/AboutSection";
 import SkillSection from "./Components/SkillSection";
+import FooterSection from "./Components/FooterSection";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                 <>
                   <HeroSection />
                   <AboutSection /> <SkillSection />
+                  <FooterSection />
                 </>
               }
             />

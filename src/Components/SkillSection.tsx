@@ -3,6 +3,7 @@ import { FaBootstrap, FaCode, FaHtml5, FaReact } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiGit, SiGithub, SiTypescript, SiVite, SiZod } from "react-icons/si";
+
 const SkillSection = () => {
   return (
     <Box px={7} mt={10}>
