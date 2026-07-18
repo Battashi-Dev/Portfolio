@@ -3,6 +3,7 @@ import NavBar from "./Components/NavBar";
 import ProjectCards from "./Components/ProjectCards";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HeroSection from "./Components/HeroSection";
+import AboutSection from "./Components/AboutSection";
 
 function App() {
   return (
@@ -11,7 +12,15 @@ function App() {
         <Box p={3} bg="gray.900" minH="100vh">
           <NavBar />
           <Routes>
-            <Route path="/" element={<HeroSection />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection />
+                  <AboutSection />{" "}
+                </>
+              }
+            />
             <Route path="/projects" element={<ProjectCards />} />
           </Routes>
         </Box>
