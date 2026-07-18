@@ -4,6 +4,7 @@ import ProjectCards from "./Components/ProjectCards";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HeroSection from "./Components/HeroSection";
 import AboutSection from "./Components/AboutSection";
+import SkillSection from "./Components/SkillSection";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
               element={
                 <>
                   <HeroSection />
-                  <AboutSection />{" "}
+                  <AboutSection /> <SkillSection />
                 </>
               }
             />

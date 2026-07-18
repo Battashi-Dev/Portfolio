@@ -16,7 +16,7 @@ const AboutSection = () => {
           {" "}
           I'm a frontend Developer who loves turning ideas into <br /> real
           products. I enjoy writing clean code, learning new <br /> technology
-          abd building projects that real world problems
+          and building projects that real world problems
         </Text>
       </Box>
       <HStack>
