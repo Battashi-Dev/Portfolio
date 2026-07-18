@@ -11,7 +11,9 @@ import {
 import logo from "../assets/download.png";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
+  const navigate = useNavigate();
   const email = "mailto:battashi.dev@gmail.com";
   const gitHub = "https://github.com/Battashi-Dev";
   const linkedin =
@@ -29,7 +31,9 @@ const HeroSection = () => {
           web experience
         </Text>
         <HStack>
-          <Button>View My Projects</Button>
+          <Button onClick={() => navigate("/projects")}>
+            View My Projects
+          </Button>
           <Button>Contact Me</Button>
         </HStack>
         <HStack>
