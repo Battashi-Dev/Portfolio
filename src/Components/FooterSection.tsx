@@ -1,63 +1,54 @@
-import { Box, Heading, HStack, Icon, Text, Link } from "@chakra-ui/react";
 import {
-  FaGithub,
-  FaLinkedin,
-  FaPaperPlane,
-  FaRegCopyright,
-} from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { useIcon } from "./Constant";
+  Box,
+  Heading,
+  HStack,
+  Icon,
+  Text,
+  Link,
+  VStack,
+  Wrap,
+} from "@chakra-ui/react";
+import { FaPaperPlane, FaRegCopyright } from "react-icons/fa";
+import { SOCIAL_ICONS } from "./Constant";
 
 const FooterSection = () => {
-  const { gitHub, linkedin, email } = useIcon();
-
   return (
-    <Box as="footer" bg="gray.800" py={4} px={7} borderRadius={10}>
-      <HStack justify="space-between">
-        <Box>
-          <HStack mb={4}>
-            <Icon color="blue" as={FaPaperPlane} />
-            <Heading fontSize="md">Contact Me</Heading>
-          </HStack>
-          <Text fontSize="sm">
-            I'm open to freelance work and opportunities. <br /> Let's build
-            something amazing together
-          </Text>
-        </Box>
-        <Box>
-          <HStack mb={1}>
-            <Icon color="blue" as={IoMdMail} />
-            <Heading fontSize="md">Email</Heading>
-          </HStack>
-          <Link href={email}>
-            <Text fontSize="sm">battashi.dev@gmail.com</Text>
-          </Link>
-        </Box>
-        <Box>
-          <HStack mb={1}>
-            <Icon color="blue" as={FaLinkedin} />
-            <Heading fontSize="md">Linkedin</Heading>
-          </HStack>
-          <Link href={linkedin} isExternal>
-            <Text fontSize="sm">linkedin.com/in/mohammed-al-battashi</Text>
-          </Link>
-        </Box>
-        <Box>
-          <HStack mb={1}>
-            <Icon color="white" as={FaGithub} />
-            <Heading fontSize="md">Contact Me</Heading>
-          </HStack>
-          <Link href={gitHub} isExternal>
-            <Text fontSize="sm">github.com/Battashi-Dev</Text>
-          </Link>
-        </Box>
-      </HStack>
-      <HStack justifyContent="center" mt={3}>
-        <Icon as={FaRegCopyright} />
-        <Text>2026</Text>
-        <Text color="blue">Battashi.dev -</Text>
-        <Text>Built with React, TypeScript & Chakra UI </Text>
-      </HStack>
+    <Box as="footer" bg="gray.800" py={4} px={7} borderRadius={10} mt={5}>
+      <VStack spacing={3}>
+        <HStack justify="center" flexWrap="wrap" align="center">
+          <Wrap>
+            <Icon color="brand.accent" as={FaPaperPlane} boxSize={5} />
+            <Heading fontSize="md">Contact Me </Heading>
+            <Text fontSize="sm">
+              I'm open to freelance work and opportunities. Let's build
+              something amazing together
+            </Text>
+          </Wrap>
+        </HStack>
+        <Wrap spacing={6} justify="center" px="5" mt={1} w="full">
+          {SOCIAL_ICONS.map(({ icon: IconCmp, label, iconColor, href }) => (
+            <Link key={label} href={href} isExternal={label !== "email"}>
+              <HStack spacing={2}>
+                <Icon color={iconColor} as={IconCmp} />
+                <Text
+                  fontSize="sm"
+                  fontWeight="bold"
+                  _hover={{ color: "brand.accent" }}
+                >
+                  {label}
+                </Text>
+              </HStack>
+            </Link>
+          ))}
+        </Wrap>
+
+        <HStack justifyContent="center" flexWrap="wrap" mt={3}>
+          <Icon as={FaRegCopyright} />
+          <Text>2026</Text>
+          <Text color="brand.accent">Battashi.dev -</Text>
+          <Text>Built with React, TypeScript & Chakra UI </Text>
+        </HStack>
+      </VStack>
     </Box>
   );
 };

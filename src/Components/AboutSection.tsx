@@ -1,47 +1,45 @@
-import { Box, Heading, HStack, Icon, Text, VStack } from "@chakra-ui/react";
-import { FaCode, FaRegCalendarAlt } from "react-icons/fa";
-import { GiElectric } from "react-icons/gi";
-import { GoGoal } from "react-icons/go";
+import { Box, Heading, HStack, Icon, Stack, Text, VStack } from "@chakra-ui/react";
+
 import { IoPerson } from "react-icons/io5";
+import { STATS } from "./Constant";
 
 const AboutSection = () => {
   return (
-    <HStack px={7} justify="space-between">
-      <Box>
+    <Stack
+    spacing={6}
+      px={10}
+      justify="space-between"
+      direction={{ base: "column", md: "row" }}
+    >
+      <Box maxW="lg">
         <HStack>
-          <Icon boxSize={5} as={IoPerson} color="blue" />
+          <Icon boxSize={5} as={IoPerson} color="brand.accent" />
           <Heading size="lg">About Me</Heading>
         </HStack>
-        <Text fontSize="md">
+        <Text maxW="md" fontSize="md">
           {" "}
-          I'm a frontend Developer who loves turning ideas into <br /> real
-          products. I enjoy writing clean code, learning new <br /> technology
-          and building projects that real world problems
+          I'm a frontend Developer who loves turning ideas into real products. I
+          enjoy writing clean code, learning new technology and building
+          projects that real world problems
         </Text>
       </Box>
-      <HStack>
-        <VStack boxSize={20}>
-          <Icon color="blue" boxSize={5} as={FaRegCalendarAlt} />
-          <Heading size="sm">1+</Heading>
-          <Text fontSize="7px">Years Learning</Text>
-        </VStack>
-        <VStack boxSize={20}>
-          <Icon color="blue" boxSize={5} as={FaCode} />
-          <Heading size="sm">1+</Heading>
-          <Text fontSize="7px">Projects</Text>
-        </VStack>
-        <VStack boxSize={20}>
-          <Icon color="blue" boxSize={5} as={GoGoal} />
-          <Heading size="sm">1+</Heading>
-          <Text fontSize="7px">Full Stack Dev</Text>
-        </VStack>
-        <VStack boxSize={20}>
-          <Icon color="blue" boxSize={5} as={GiElectric} />
-          <Heading size="sm">1+</Heading>
-          <Text fontSize="7px">Learner</Text>
-        </VStack>
+      <HStack spacing={8}>
+        {STATS.map(({ icon: IconCmp, label, description }) => (
+          <VStack key={description} minW="20">
+            <Icon color="brand.accent" boxSize={5} as={IconCmp} />
+            <Heading
+              size="sm"
+              fontStyle={isNaN(Number(label)) ? "italic" : "normal"}
+            >
+              {label}
+            </Heading>
+            <Text fontSize="xs" textAlign="center">
+              {description}
+            </Text>
+          </VStack>
+        ))}
       </HStack>
-    </HStack>
+    </Stack>
   );
 };
 
