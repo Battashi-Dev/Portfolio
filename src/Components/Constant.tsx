@@ -40,7 +40,7 @@ export const NAV_LINKS = [
 
 export const STATS = [
   { icon: FaRegCalendarAlt, description: "Years Learning", label: "1+" },
-  { icon: FaCode, description: "Projects", label: 1 },
+  { icon: FaCode, description: "Projects", label: "1+" },
   { icon: GoGoal, description: "Full Stack Dev", label: "Goal" },
   { icon: GiElectric, description: "Learner", label: "Fast" },
 ];

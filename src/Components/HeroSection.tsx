@@ -50,7 +50,7 @@ const HeroSection = () => {
           >
             View My Projects
           </Button>
-          <Button variant="outline" borderColor="whiteAlpha.400" isDisabled>
+          <Button variant="outline" borderColor="whiteAlpha.400">
             Download CV
           </Button>
         </HStack>

@@ -31,14 +31,14 @@ const ProjectCards = () => {
           direction={{ base: "column", md: "row" }}
         >
           <HStack>
-             <Image
-            src={logo}
-            alt="title"
-            objectFit="cover"
-            w={{ base: "100%", md: "40%" }}
-            aspectRatio={{ base: 16 / 9, md: 4 / 3 }}
+            <Image
+              src={logo}
+              alt="title"
+              objectFit="cover"
+              w={{ base: "100%", md: "40%" }}
+              aspectRatio={{ base: 16 / 9, md: 4 / 3 }}
             />
-  
+
             <Box>
               <CardHeader>
                 <Link href={githubHref} isExternal>

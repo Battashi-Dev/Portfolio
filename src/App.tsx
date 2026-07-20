@@ -11,11 +11,15 @@ function App() {
   return (
     <BrowserRouter>
       <main>
-        <Box p={3} bg="gray.900" minH="100vh" overflowX="hidden">
+        <Box
+          p={3}
+          minH="100vh"
+          overflowX="hidden"
+        >
           <Box py={4} px={6}>
             <NavBar />
           </Box>
-          <Box as="main" px={6} w="full" >
+          <Box as="main" px={6} w="full">
             <Routes>
               <Route
                 path="/"

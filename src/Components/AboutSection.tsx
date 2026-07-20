@@ -1,4 +1,12 @@
-import { Box, Heading, HStack, Icon, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  HStack,
+  Icon,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 import { IoPerson } from "react-icons/io5";
 import { STATS } from "./Constant";
@@ -6,7 +14,7 @@ import { STATS } from "./Constant";
 const AboutSection = () => {
   return (
     <Stack
-    spacing={6}
+      spacing={6}
       px={10}
       justify="space-between"
       direction={{ base: "column", md: "row" }}

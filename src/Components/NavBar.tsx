@@ -8,7 +8,7 @@ const NavBar = () => {
 
   return (
     <HStack justify="space-between" w="full">
-      <HStack>
+      <HStack  >
         <Image boxSize={6} borderRadius={12} src={logo} />
         <Heading fontSize="lg">
           Battashi
@@ -24,6 +24,7 @@ const NavBar = () => {
             borderRadius={18}
             variant="ghost"
             onClick={() => navigate(path)}
+           
           >
             {label}
           </Button>

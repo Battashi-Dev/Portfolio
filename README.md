@@ -30,17 +30,20 @@ This portfolio serves as a personal landing page for my work as a developer. It 
 ## Getting Started
 
 1. Clone the repository
+
    ```bash
    git clone <your-repo-url>
    cd portfolio
    ```
 
 2. Install dependencies
+
    ```bash
    npm install
    ```
 
 3. Start the development server
+
    ```bash
    npm run dev
    ```
