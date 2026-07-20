@@ -7,13 +7,15 @@ import {
   Link,
   VStack,
   Wrap,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { FaPaperPlane, FaRegCopyright } from "react-icons/fa";
 import { SOCIAL_ICONS } from "./Constant";
 
 const FooterSection = () => {
+  const footerBg = useColorModeValue("blackAlpha.50", "whiteAlpha.100");
   return (
-    <Box as="footer" bg="gray.800" py={4} px={7} borderRadius={10} mt={5}>
+    <Box as="footer" bg={footerBg} py={4} px={7} borderRadius={10} mt={5}>
       <VStack spacing={3}>
         <HStack justify="center" flexWrap="wrap" align="center">
           <Wrap>

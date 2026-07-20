@@ -2,6 +2,7 @@ import { Button, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/battashi-logo.svg";
 import { useNavigate } from "react-router-dom";
 import { NAV_LINKS } from "./Constant";
+import ColorModeToggle from "./ColorModeToggle";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const NavBar = () => {
         </Heading>
       </HStack>
       <HStack gap={2}>
+        <ColorModeToggle/>
         {NAV_LINKS.map(({ label, path }) => (
           <Button
             size="sm"
