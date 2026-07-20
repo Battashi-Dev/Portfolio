@@ -1,6 +1,8 @@
+import expensiveTracker from "../assets/ExpenseTracker.png"
 export const PROJECTS = [
   {
     title: "Expensive Tracker",
+    image: expensiveTracker,
     githubHref: "https://github.com/Battashi-Dev/expensive-tracker",
     demoHref: "https://expensive-tracker-wheat.vercel.app/",
     description:

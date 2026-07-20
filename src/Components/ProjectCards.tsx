@@ -14,41 +14,43 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { PROJECTS } from "./Projects";
-import logo from "../assets/ExpenseTracker.png";
 
 const ProjectCards = () => {
   return (
-    <SimpleGrid>
-      {PROJECTS.map(({ title, githubHref, demoHref, description, tags }) => (
-        <Card
-          key={title}
-          borderRadius={20}
-          bg="whiteAlpha.50"
-          border="1px solid"
-          borderColor="whiteAlpha.100"
-          boxShadow="lg"
-          overflow="hidden"
-          _hover={{ transform: "translateY(-4px)", transition: "0.2s" }}
-          direction={{ base: "column", md: "row" }}
-        >
-          <HStack>
+    <SimpleGrid column={{ base: 1, xl: 2 }} spacing={6}>
+      {PROJECTS.map(
+        ({ title, githubHref, demoHref, description, tags, image }) => (
+          <Card
+            key={title}
+            borderRadius={20}
+            bg="whiteAlpha.50"
+            border="1px solid"
+            borderColor="whiteAlpha.100"
+            boxShadow="lg"
+            justify="space-between"
+            overflow="hidden"
+            _hover={{ transform: "translateY(-4px)", transition: "0.2s" }}
+            direction={{ base: "column", md: "row" }}
+          >
             <Image
-              src={logo}
-              alt="title"
+              src={image}
+              alt={title}
               objectFit="contain"
-              w={{ base: "100%", md: "40%" }}
+              w={{ base: "100%", md: "300%" }}
               aspectRatio={{ base: 16 / 9, md: 4 / 3 }}
             />
 
             <Box>
               <CardHeader>
                 <Link href={githubHref} isExternal>
-                  <Heading size="lg">{title}</Heading>
+                  <Heading size="lg" mt={10}>
+                    {title}
+                  </Heading>
                 </Link>
               </CardHeader>
               <CardBody>
                 <Text>{description}</Text>
-                <HStack spacing={2} mt={2} flexWrap="wrap">
+                <HStack spacing={6} mt={2} flexWrap="wrap">
                   {tags.map(({ label, colorScheme }) => (
                     <Tag key={label} colorScheme={colorScheme}>
                       {label}
@@ -57,7 +59,7 @@ const ProjectCards = () => {
                 </HStack>
               </CardBody>
               <CardFooter>
-                <Link href={demoHref}>
+                <Link href={demoHref} isExternal>
                   <Button
                     fontWeight="bold"
                     size="sm"
@@ -70,9 +72,9 @@ const ProjectCards = () => {
                 </Link>
               </CardFooter>
             </Box>
-          </HStack>
-        </Card>
-      ))}
+          </Card>
+        ),
+      )}
     </SimpleGrid>
   );
 };

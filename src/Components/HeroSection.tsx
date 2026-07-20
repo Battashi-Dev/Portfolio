@@ -36,9 +36,8 @@ const HeroSection = () => {
             Al-Battashi
           </Text>
         </Heading>
-        <Text fontSize="md" color="whiteAlpha.800">
-          Frontend Developer building clean, responsive <br /> and user-friendly
-          web experience
+        <Text fontSize="md" maxW="md">
+          Frontend Developer building clean, responsive and user-friendly
         </Text>
         <HStack spacing={4}>
           <Button
