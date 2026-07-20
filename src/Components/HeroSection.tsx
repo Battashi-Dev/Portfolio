@@ -50,9 +50,14 @@ const HeroSection = () => {
           >
             View My Projects
           </Button>
-          <Button variant="outline" borderColor="whiteAlpha.400">
-            Download CV
-          </Button>
+          <Link
+            href="/public/Al-Battashi CV .pdf"
+            download="/public/Al-Battashi CV .pdf"
+          >
+            <Button variant="outline" borderColor="whiteAlpha.400">
+              Download CV
+            </Button>
+          </Link>
         </HStack>
         <HStack spacing={3} pt={2}>
           {SOCIAL_ICONS.map(({ icon: IconCmp, href, label }) => (

@@ -27,6 +27,7 @@ const ProjectCards = () => {
           border="1px solid"
           borderColor="whiteAlpha.100"
           boxShadow="lg"
+          overflow="hidden"
           _hover={{ transform: "translateY(-4px)", transition: "0.2s" }}
           direction={{ base: "column", md: "row" }}
         >
@@ -34,7 +35,7 @@ const ProjectCards = () => {
             <Image
               src={logo}
               alt="title"
-              objectFit="cover"
+              objectFit="contain"
               w={{ base: "100%", md: "40%" }}
               aspectRatio={{ base: 16 / 9, md: 4 / 3 }}
             />
