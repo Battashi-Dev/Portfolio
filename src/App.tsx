@@ -11,11 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <main>
-        <Box
-          p={3}
-          minH="100vh"
-          overflowX="hidden"
-        >
+        <Box p={3} minH="100vh" overflowX="hidden">
           <Box py={4} px={6}>
             <NavBar />
           </Box>

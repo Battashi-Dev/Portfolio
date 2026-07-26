@@ -7,7 +7,7 @@ const config: ThemeConfig = {
 
 export const theme = extendTheme({
   config,
-  semanticToken: {
+  semanticTokens: {
     colors: {
       "chakra-body-bg": { _dark: "gray.900", _light: "white" },
       "chakra-body-text": { _dark: "whiteAlpha.900", _light: "gray.800" },

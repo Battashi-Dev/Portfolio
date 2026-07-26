@@ -22,6 +22,8 @@ const ProjectCards = () => {
         ({ title, githubHref, demoHref, description, tags, image }) => (
           <Card
             key={title}
+            h="100%"
+            display="flex"
             borderRadius={20}
             bg="whiteAlpha.50"
             border="1px solid"
@@ -35,15 +37,16 @@ const ProjectCards = () => {
             <Image
               src={image}
               alt={title}
-              objectFit="contain"
-              w={{ base: "100%", md: "300%" }}
-              aspectRatio={{ base: 16 / 9, md: 4 / 3 }}
+              objectFit="cover"
+              borderRadius={20}
+              w={{ base: "100%", md: "50%" }}
+              h={{ base: " 200%", md: "auto" }}
             />
 
             <Box>
               <CardHeader>
                 <Link href={githubHref} isExternal>
-                  <Heading size="lg" mt={10}>
+                  <Heading size="lg" mt={10} _hover={{ color: "brand.accent"}}>
                     {title}
                   </Heading>
                 </Link>
