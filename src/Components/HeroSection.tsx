@@ -50,8 +50,8 @@ const HeroSection = () => {
             View My Projects
           </Button>
           <Link
-            href="/public/Al-Battashi CV .pdf"
-            download="/public/Al-Battashi CV .pdf"
+            href="/Al-Battashi CV.pdf"
+            download="/Al-Battashi CV.pdf"
           >
             <Button variant="outline" borderColor="whiteAlpha.400">
               Download CV
